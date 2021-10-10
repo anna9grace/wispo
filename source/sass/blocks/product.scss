@@ -1,0 +1,225 @@
+.product {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  padding-top: 17px;
+
+  @include viewport--xl {
+    padding-top: 0;
+  }
+
+  @include viewport--lg {
+    flex-direction: column;
+  }
+}
+
+.product__picture {
+  margin-top: 5px;
+  margin-right: 32px;
+
+  @include viewport--xl {
+    margin-top: 0;
+    margin-left: -5px;
+    margin-bottom: 13px;
+  }
+
+  @include viewport--sm {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 18px;
+    margin-right: 0;
+  }
+
+  img {
+    width: 120px;
+    height: 147px;
+    object-fit: contain;
+
+    @include viewport--sm {
+      width: 107px;
+      height: 118px;
+    }
+  }
+}
+
+.product__info {
+  width: 259px;
+
+  @include viewport--lg {
+    max-width: 230px;
+    width: auto;
+  }
+
+  h3 {
+    margin-top: 11px;
+    margin-bottom: 22px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    @include viewport--lg {
+      margin-bottom: 18px;
+    }
+
+    @include viewport--sm {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  small {
+    font-size: 14px;
+    line-height: 17px;
+    color: $color-nobel;
+  }
+}
+
+.product__close-btn {
+  position: absolute;
+  display: flex;
+  width: 16px;
+  height: 16px;
+  right: 0;
+  top: 0;
+  padding: 0;
+  border-radius: 50%;
+  background-color: $color-default-black;
+  color: $color-default-white;
+  border: none;
+  cursor: pointer;
+  transition: background-color $default-transition-settings,
+    opacity $default-transition-settings;
+
+  @include viewport--sm {
+    width: 12px;
+    height: 12px;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: transparentize($color-default-black, 0.3);
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  svg {
+    margin: auto;
+  }
+}
+
+.product__price {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+
+  @include viewport--sm {
+    flex-direction: column;
+    font-size: 16px;
+    line-height: 20px;
+    align-items: flex-start;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.product__old-price {
+  margin-left: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: line-through;
+  color: $color-nobel;
+
+  @include viewport--sm {
+    margin-left: 0;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.product__buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 11px;
+  font-weight: 600;
+
+  @include viewport--lg {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    margin-top: 18px;
+  }
+
+  @include viewport--sm {
+    margin-top: 3px;
+  }
+}
+
+.product__button--in-click {
+  display: flex;
+  padding: 5px;
+  font-size: 12px;
+  line-height: 15px;
+  transition: color $default-transition-settings,
+    opacity $default-transition-settings;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: transparentize($color-default-black, 0.3);
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  svg {
+    margin-right: 8px;
+  }
+
+  @include viewport--sm {
+    display: none;
+  }
+
+  @include viewport--lg {
+    margin-left: -5px;
+  }
+}
+
+.product__button--cart {
+  padding: 10px 18px;
+
+  @include viewport--lg {
+    margin-top: 10px;
+  }
+
+  @include viewport--sm {
+    padding: 5px 16px 1px 16px;
+  }
+
+  .product__button-text {
+    font-size: 14px;
+    line-height: 17px;
+
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  .product__button-icon {
+    display: none;
+
+    @include viewport--sm {
+      display: initial;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+
+.select {
+  position: relative;
+  display: flex;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid transparentize($color-default-black, 0.9);
+  box-shadow: inset 3px 3px 3px transparentize($color-default-black, 0.9);
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color $default-transition-settings,
+    box-shadow $default-transition-settings;
+
+  @include viewport--md {
+    height: 36px;
+  }
+
+  &:hover,
+  &:focus-within {
+    border-color: transparentize($color-default-black, 0.8);
+    box-shadow: inset 3px 3px 3px transparentize($color-default-black, 0.8);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 3px;
+    width: 25px;
+    height: 60%;
+    align-self: center;
+    background-color: $color-default-white;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 17px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    background: url("../img/svg/mark.svg") center no-repeat;
+
+    @include viewport--md {
+      right: 15px;
+      top: 14px;
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  select {
+    width: 100%;
+    padding-left: 14px;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 500;
+    color: $color-nobel;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+
+    @include viewport--md {
+      padding-left: 10px;
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+}

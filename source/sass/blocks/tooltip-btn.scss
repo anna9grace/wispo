@@ -1,0 +1,18 @@
+.tooltip-btn {
+  margin-left: 10px;
+
+  button {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    color: $color-nobel;
+    border: none;
+    background-color: $color-white-smoke;
+    font-weight: 700;
+
+    @include viewport--md {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

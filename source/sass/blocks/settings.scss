@@ -1,0 +1,64 @@
+.settings {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+
+  @include viewport--md {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.settings__dropdown {
+  display: flex;
+  flex-wrap: wrap;
+
+  label {
+    font-weight: 500;
+  }
+}
+
+.settings__select {
+  width: 250px;
+  margin-top: 20px;
+
+  @include viewport--lg {
+    width: 235px;
+  }
+
+  @include viewport--md {
+    width: 100%;
+    margin-top: 12px;
+  }
+}
+
+.settings__features {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+
+  input {
+    width: 20px;
+    height: 20px;
+    margin-right: 14px;
+
+    @include viewport--md {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+.settings__features-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+
+  @include viewport--lg {
+    align-items: flex-start;
+  }
+
+  @include viewport--md {
+    margin-bottom: 0;
+  }
+}

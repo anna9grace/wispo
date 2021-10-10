@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  @@include("source/html/base/head.html")
+  <title>ProjectName — Главная</title>
+
+</head>
+<body>
+
+  <div style="display: none;">
+    @@include("build/img/sprite_auto.svg")
+  </div>
+
+  <div class="wrapper">
+    <main>
+      <section class="compare">
+        <h2 class="visually-hidden">сравнение товаров</h2>
+        <div class="container container--compare">
+          <div class="compare__header">
+            <div class="compare__settings settings">
+              <div class="settings__dropdown">
+                <label for="categories">Для категорий</label>
+                <div class="tooltip-btn">
+                  <button aria-label="Тут текст подсказки" data-balloon-pos="up">?</button>
+                </div>
+                <div class="settings__select select">
+                  <select name="categories" id="categories">
+                    <option value="smartphones" selected>Смартфоны</option>
+                    <option value="tv">ТВ</option>
+                    <option value="computers">Компьютеры</option>
+                  </select>
+                </div>
+              </div>
+              <div class="settings__features">
+                <p class="settings__features-option">
+                  <input type="radio" name="compared-features" id="all-features" value="all" checked>
+                  <label for="all-features">Все характеристики</label>
+                </p>
+                <p class="settings__features-option">
+                  <input type="radio" name="compared-features" id="different-features" value="difference">
+                  <label for="different-features">Показать только различия</label>
+                </p>
+              </div>
+            </div>
+
+            <div class="compare__products">
+              <article class="product compare__product-item">
+                <button class="product__close-btn">
+                  <svg width="8" height="8" aria-hidden="true">
+                    <use xlink:href="#close"></use>
+                  </svg>
+                </button>
+                <div class="product__picture">
+                  <a href="#">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/product1.webp 1x, img/content/product1@2x.webp 2x">
+                      <img src="img/content/product1" alt="Apple iPhone 11" width="120" height="147" srcset="img/content/product1@2x.jpg 2x">
+                    </picture>
+                  </a>
+                </div>
+                <div class="product__info">
+                  <small>Смартфоны</small>
+                  <h3>Apple iPhone 11 64 Gb (Gold)</h3>
+                  <div class="product__price">
+                    <p>49 999 ₽</p>
+                    <p class="product__old-price">60 999 ₽</p>
+                  </div>
+                  <div class="product__buttons">
+                    <a class="product__button btn btn--dark product__button--cart" href="#">
+                      <span class="product__button-text">В корзину</span>
+                      <span class="product__button-icon">
+                        <svg width="22" height="22" aria-hidden="true">
+                          <use xlink:href="#cart"></use>
+                        </svg>
+                      </span>
+                    </a>
+                    <a class="product__button product__button--in-click" href="#">
+                      <svg width="15" height="16" aria-hidden="true">
+                        <use xlink:href="#phone"></use>
+                      </svg>
+                      <span>Купить в 1 клик</span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product compare__product-item">
+                <button class="product__close-btn">
+                  <svg width="8" height="8" aria-hidden="true">
+                    <use xlink:href="#close"></use>
+                  </svg>
+                </button>
+                <div class="product__picture">
+                  <a href="#">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/product2.webp 1x, img/content/product2@2x.webp 2x">
+                      <img src="img/content/product2" alt="Xiaomi Redmi Note 8" width="120" height="147" srcset="img/content/product2@2x.jpg 2x">
+                    </picture>
+                  </a>
+                </div>
+                <div class="product__info">
+                  <small>Смартфоны</small>
+                  <h3>Xiaomi Redmi Note 8 Pro (blue)</h3>
+                  <div class="product__price">
+                    <p>16 700 ₽</p>
+                    <p class="product__old-price">19 999 ₽</p>
+                  </div>
+                  <div class="product__buttons">
+                    <a class="product__button btn btn--dark product__button--cart" href="#">
+                      <span class="product__button-text">В корзину</span>
+                      <span class="product__button-icon">
+                        <svg width="22" height="22" aria-hidden="true">
+                          <use xlink:href="#cart"></use>
+                        </svg>
+                      </span>
+                    </a>
+                    <a class="product__button product__button--in-click" href="#">
+                      <svg width="15" height="16" aria-hidden="true">
+                        <use xlink:href="#phone"></use>
+                      </svg>
+                      <span>Купить в 1 клик</span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <ul class="compare__main js-accordion">
+            <li class="feature feature--short">
+              <p class="feature__title"><span>Бонусные рубли</span></p>
+              <div class="feature__inner-wrapper">
+                <div class="feature__value feature__value--bonus">
+                  <p class="feature__value-wrapper"><span>+ 2 000&nbsp;</span> бонусов</p>
+                </div>
+                <div class="feature__value feature__value--bonus">
+                  <p class="feature__value-wrapper"><span>+ 1 000&nbsp;</span> бонусов</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="feature feature--short">
+              <p class="feature__title"><span>Акции и специальные предложения</span></p>
+              <div class="feature__inner-wrapper">
+                <p class="feature__value">Рассрочка</p>
+                <p class="feature__value">Скидка 50% на наушники</p>
+              </div>
+            </li>
+
+            <li class="feature feature--short">
+              <p class="feature__title"><span>Наличие</span></p>
+              <div class="feature__inner-wrapper">
+                <p class="feature__value">В наличии</p>
+                <p class="feature__value">От 3 до 5 дней</p>
+              </div>
+            </li>
+
+            <li class="feature feature--long">
+              <p class="feature__title"><span>Основные</span></p>
+              <ul class="feature__wrapper">
+                <li>
+                  <p class="feature__subfeature">Операционная система</p>
+                  <div class="feature__inner-wrapper">
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Операционная система</span>
+                      iOS 13
+                    </p>
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Операционная система</span>
+                      iOS 13
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <p class="feature__subfeature">Цвет</p>
+                  <div class="feature__inner-wrapper">
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Цвет</span>
+                      золотой
+                    </p>
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Цвет</span>
+                      черный
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <p class="feature__subfeature">Год выпуска</p>
+                  <div class="feature__inner-wrapper">
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Год выпуска</span>
+                      2019
+                    </p>
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Год выпуска</span>
+                      2019
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="feature feature--long">
+              <p class="feature__title"><span>Процессор</span></p>
+              <ul class="feature__wrapper">
+                <li>
+                  <p class="feature__subfeature">Производитель</p>
+                  <div class="feature__inner-wrapper">
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Производитель</span>
+                      Apple
+                    </p>
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Производитель</span>
+                      Apple
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <p class="feature__subfeature">Тип</p>
+                  <div class="feature__inner-wrapper">
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Тип</span>
+                      A13 Bionic
+                    </p>
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Тип</span>
+                      A13 Bionic
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="feature feature--long">
+              <p class="feature__title"><span>Экран</span></p>
+              <ul class="feature__wrapper">
+                <li>
+                  <p class="feature__subfeature">Диагональ (дюймов)</p>
+                  <div class="feature__inner-wrapper">
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Диагональ (дюймов)</span>
+                      5,8
+                    </p>
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Диагональ (дюймов)</span>
+                      5,8
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <p class="feature__subfeature">Тип экрана</p>
+                  <div class="feature__inner-wrapper">
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Тип экрана</span>
+                      Super Retina XDR
+                    </p>
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Тип экрана</span>
+                      Super Retina XDR
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <p class="feature__subfeature">Разрешение экрана</p>
+                  <div class="feature__inner-wrapper">
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Разрешение экрана</span>
+                      2436×1125 точек
+                    </p>
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Разрешение экрана</span>
+                      2436×1125 точек
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="feature feature--long">
+              <p class="feature__title"><span>Камера</span></p>
+              <ul class="feature__wrapper">
+                <li>
+                  <p class="feature__subfeature">Количество основных камер</p>
+                  <div class="feature__inner-wrapper">
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Количество основных камер</span>
+                      3
+                    </p>
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Количество основных камер</span>
+                      3
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <p class="feature__subfeature">Разрешения основных камер</p>
+                  <div class="feature__inner-wrapper">
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Разрешения основных камер</span>
+                      12 МПикс, 12 МПикс, 12 МПикс
+                    </p>
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Разрешения основных камер</span>
+                      12 МПикс, 12 МПикс, 12 МПикс
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <p class="feature__subfeature">Функции основной камеры</p>
+                  <div class="feature__inner-wrapper">
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Функции основной камеры</span>
+                      Режим «Портрет», портретное освещение, оптическая стабилизация, вспышка True Tone, Focus Pixels
+                    </p>
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Функции основной камеры</span>
+                      Режим «Портрет», портретное освещение, оптическая стабилизация, вспышка True Tone, Focus Pixels
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <p class="feature__subfeature">Фронтальная камера</p>
+                  <div class="feature__inner-wrapper">
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Фронтальная камера</span>
+                      есть
+                    </p>
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Фронтальная камера</span>
+                      есть
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <p class="feature__subfeature">Разрешение фронтальной камеры</p>
+                  <div class="feature__inner-wrapper">
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Разрешение фронтальной камеры</span>
+                      12 Мпикс
+                    </p>
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Разрешение фронтальной камеры</span>
+                      12 Мпикс
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <p class="feature__subfeature">Вспышка</p>
+                  <div class="feature__inner-wrapper">
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Вспышка</span>
+                      есть, светодиодная
+                    </p>
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Вспышка</span>
+                      есть, светодиодная
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="feature feature--long">
+              <p class="feature__title"><span>Память</span></p>
+              <ul class="feature__wrapper">
+                <li>
+                  <p class="feature__subfeature">Встроенная память</p>
+                  <div class="feature__inner-wrapper">
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Встроенная память</span>
+                      64 Гб
+                    </p>
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Встроенная память</span>
+                      64 Гб
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="feature feature--long">
+              <p class="feature__title"><span>Питание</span></p>
+              <ul class="feature__wrapper">
+                <li>
+                  <p class="feature__subfeature">Тип разъема для зарядки</p>
+                  <div class="feature__inner-wrapper">
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Тип разъема для зарядки</span>
+                      Lightning
+                    </p>
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Тип разъема для зарядки</span>
+                      Lightning
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <p class="feature__subfeature">Функция быстрой зарядки</p>
+                  <div class="feature__inner-wrapper">
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Функция быстрой зарядки</span>
+                      есть
+                    </p>
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Функция быстрой зарядки</span>
+                      есть
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <p class="feature__subfeature">Функция беспроводной зарядки</p>
+                  <div class="feature__inner-wrapper">
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Функция беспроводной зарядки</span>
+                      есть
+                    </p>
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Функция беспроводной зарядки</span>
+                      есть
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="feature feature--long">
+              <p class="feature__title"><span>Подключение</span></p>
+              <ul class="feature__wrapper">
+                <li>
+                  <div class="feature__subfeature">
+                    Разъем Lightning 8 Pin
+                    <div class="feature__tooltip-btn tooltip-btn">
+                      <button aria-label="4500 мАч - это примерно 30 часов активного использования устройства" data-balloon-pos="up" data-balloon-length="large">?</button>
+                    </div>
+                  </div>
+                  <div class="feature__inner-wrapper">
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Разъем Lightning 8 Pin</span>
+                      есть
+                    </p>
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Разъем Lightning 8 Pin</span>
+                      есть
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <p class="feature__subfeature">Разъем для наушников</p>
+                  <div class="feature__inner-wrapper">
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Разъем для наушников</span>
+                      Lightning
+                    </p>
+                    <p class="feature__value">
+                      <span class="feature__value-subname">Разъем для наушников</span>
+                      Lightning
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="compare__footer">
+            <p class="compare__description">
+              Смартфон Apple iPhone 11 64GB Black (MWLT2RU/A) и Смартфон Apple iPhone SE 2020 128GB Black (MXD02RU/A) - сравнение основных характеристик моделей
+            </p>
+
+            <div class="compare__buttons">
+              <button class="btn btn--light">Очистить список</button>
+              <a class="btn btn--dark compare__button compare__button--back" href="#">Назад к товарам</a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+  </div>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+</html>
