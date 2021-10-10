@@ -736,19 +736,27 @@ button,
       padding: 0; } }
 
 .tooltip-btn {
-  margin-left: 10px; }
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0; }
+  @media (max-width: 1023px) {
+    .tooltip-btn {
+      width: 18px;
+      height: 18px; } }
   .tooltip-btn button {
-    width: 24px;
-    height: 24px;
+    display: block;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     color: #9A9A9A;
     border: none;
     background-color: #F6F6F6;
     font-weight: 700; }
-    @media (max-width: 1023px) {
-      .tooltip-btn button {
-        width: 18px;
-        height: 18px; } }
 
 .compare {
   display: -webkit-box;
